@@ -1,10 +1,10 @@
 {
-  "name": "food-delivery",
+  "name": "fooddelivery",
   "version": "1.0.0",
-  "description": "food delivery app built using react",
+  "description": "food delivery app using react",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "build": "pracel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -14,7 +14,7 @@
   "keywords": [
     "react"
   ],
-  "author": "Ch Praneeth Reddy",
+  "author": "CH PRANEETH REDDY",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Ch-Praneeth1/Food_Delivery_App/issues"
@@ -27,8 +27,5 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  },
-  "browserslist":[
-    "last 2 versions"
-  ]
+  }
 }
