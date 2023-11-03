@@ -3,6 +3,13 @@
     justify-content: space-between;
     border: 1px solid black;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.loginButton{
+    width: 80px;
+    /* height: 40px; */
+    /* padding: 0px; */
 }
 
 .logo img{

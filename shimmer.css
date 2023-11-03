@@ -1,0 +1,53 @@
+
+.shimmerCard{
+    width: 200px;
+    height: 371px;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 20px;
+    background-color: #f0f0f0;
+}
+
+.shimmer-resturant-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.shimmer-body-container{
+    display: flex;
+    margin: 20px;
+}
+
+.shimmer-resturant-filter{
+    padding: 15px;
+    /* width: 100px; */
+}
+
+.shimmer-resturant-filter button{
+    height: 35px;
+    width: 144.133px;
+    /* background-color: #f0f0f0; */
+}
+
+.shimmer-search{
+    padding: 15px;
+}
+
+.shimmer-search input{
+    height: 30px;
+    width: 180px;
+    color: #f0f0f0;
+}
+
+.shimmer-search-button {
+    padding: 15px;
+}
+
+.shimmer-search-button button{
+    height: 35px;
+    width: 70px;
+    border-radius: 5px;
+}
