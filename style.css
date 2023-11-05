@@ -38,6 +38,10 @@
     margin: 20px;
 }
 
+.resturant-card h3 h4{
+    text-decoration: none;
+}
+
 .resturant-card:hover{
     border: 1px solid black;
     cursor: pointer;

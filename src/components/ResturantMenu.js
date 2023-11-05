@@ -18,7 +18,7 @@ const ResturantMenu = () =>{
         const data=await fetch(RESTURANT_API+resId+"&catalog_qa=undefined&submitAction=ENTER");
         const json = await data.json();
         console.log(json.data)
-        // const resturantName = json?.data?.cards[0]?.card?.card?.info?.name;
+        //  const resturantName = json?.data?.cards[0]?.card?.card?.info?.name;
         // const itemCards =json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
         // console.log(itemCards)
 
