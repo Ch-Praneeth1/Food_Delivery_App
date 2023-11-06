@@ -85,7 +85,7 @@ const Body = () =>{
 
                 {
                    filterRestaurantList.map(
-                        (resturant) => <Link key={resturant.info.id} to={"/Resturants/"+resturant.info.id}><ResturantCard resData={resturant}/></Link>
+                        (resturant) => <Link style={{textDecoration: 'none', color:"black"}} key={resturant.info.id} to={"/Resturants/"+resturant.info.id}><ResturantCard resData={resturant}/></Link>
                     )
                 }
 

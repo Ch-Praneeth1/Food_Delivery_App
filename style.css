@@ -36,10 +36,8 @@
     border: 1px solid white;
     border-radius: 10px;
     margin: 20px;
-}
-
-.resturant-card h3 h4{
-    text-decoration: none;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
 }
 
 .resturant-card:hover{
