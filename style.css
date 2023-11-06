@@ -96,3 +96,132 @@
     cursor: pointer;
     border-radius: 5px;
 }
+
+
+.menu{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cost-for-two{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cost-for-two div{
+    background-color: #f0f0f0;
+    width: 50%;
+    display: flex;
+}
+.cost-for-two div h4{
+    padding-left: 10px;
+}
+
+.item-container{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item-list{
+    background-color: #f0f0f0;
+    width: 50%;
+    /* display: flex; */
+    justify-content: space-between;
+    /* border: 1px solid black; */
+}
+
+.menu-header{
+    background-color: #f0f0f0;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.rest-details h3,p{
+    outline: none;
+    padding-left: 10px;
+}
+
+.rest-details h3{
+    margin-bottom: 30px;
+}
+.rest-details p{
+    font-weight: 10;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.rating-container{
+    /* width: 60px; */
+    margin: 10px;
+    border: 0.5px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+.rating{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    color: #3D9B6D;
+    font-weight: 700;
+}
+
+.item{
+    /* border: 1px solid black; */
+    border-bottom: 1px dotted black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    outline: none;
+}
+
+.item-details img,h3{
+    padding-left: 10px;
+}
+
+
+.item-details p{
+    margin-top: -10px;
+}
+
+.item-details{
+    height: 150px;
+    
+}
+
+.item-logo {
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 10px;
+    
+}
+
+.add-button button{
+    width: 100px;
+    height: 30px;
+    margin-left: 65px;
+    position: absolute;
+    margin-top: -40px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-button{
+   width: 100%;
+   
+}
