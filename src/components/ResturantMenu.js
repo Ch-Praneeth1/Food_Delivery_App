@@ -1,30 +1,30 @@
-import { useEffect , useState } from "react";
+import { useState } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
-import {RESTURANT_API} from "../utils/constants";
 import ItemCard from "./ItemCard";
+import useResturantMenu from "../utils/useResturantMenu";
 
 const ResturantMenu = () =>{
 
-    const [resturantInfo, setresturantInfo] = useState(null);
+    // const [resturantInfo, setresturantInfo] = useState(null);
     const {resId} = useParams();
-    // console.log(resId)
+    const resturantInfo = useResturantMenu(resId);
+    console.log(resturantInfo)
 
+    // useEffect(()=>{
+    //     fetchMenu();
+    // },[]);
 
-    useEffect(()=>{
-        fetchMenu();
-    },[]);
+    // const fetchMenu = async () =>{
+    //     const data=await fetch(RESTURANT_API+resId+"&catalog_qa=undefined&submitAction=ENTER");
+    //     const json = await data.json();
+    //     // console.log(json.data)
+    //     //  const resturantName = json?.data?.cards[0]?.card?.card?.info?.name;
+    //     // const itemCards =json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
+    //     // console.log(itemCards)
 
-    const fetchMenu = async () =>{
-        const data=await fetch(RESTURANT_API+resId+"&catalog_qa=undefined&submitAction=ENTER");
-        const json = await data.json();
-        // console.log(json.data)
-        //  const resturantName = json?.data?.cards[0]?.card?.card?.info?.name;
-        // const itemCards =json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
-        // console.log(itemCards)
-
-        setresturantInfo(json.data);
-    }
+    //     setresturantInfo(json.data);
+    // }
 
     if(resturantInfo === null){
         return <Shimmer/>
