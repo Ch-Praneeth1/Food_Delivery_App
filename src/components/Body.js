@@ -3,13 +3,14 @@ import resList from "../utils/mockData";
 import { useState , useEffect } from "react";
 import Shimmer from "./Shimmer";
 import {Link} from "react-router-dom";
-
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 
 const Body = () =>{
     const [restaurantList, setrestaurantList] = useState([]);
     const [filterRestaurantList, setfilterRestaurantList] = useState([]);
     const [searchValue , setsearchValue] = useState([""]);
+    const onlineStatus = useOnlineStatus();
     
     useEffect(() =>{
         fetchData();
@@ -28,11 +29,22 @@ const Body = () =>{
         setfilterRestaurantList(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
 
+
+
+    if(onlineStatus == false){
+        return(
+            <h1>You are offline check your internet connection </h1>
+        )
+    }
+
+
+    
     // console.log("1st render");
 
     // if(restaurantList.length === 0){                        conditional rendering 
     //     return <Shimmer/>;
     // };
+
 
     return restaurantList.length ===0 ? <Shimmer/> :(                         //conditonal rendering using terinary operator 
         <div className="body">
