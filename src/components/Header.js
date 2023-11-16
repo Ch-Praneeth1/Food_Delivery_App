@@ -7,7 +7,7 @@ const Header = () =>{
     const [btnValue ,setbtnValue] = useState("Login");
     const onlineStatus = useOnlineStatus();
     return (
-        <div className="flex bg-blue-300 items-center ">
+        <div className="flex bg-blue-200 items-center ">
             <div className="w-24 my-2 mx-4">
                 <img src={LOGO_URL} alt=""></img>
             </div>
