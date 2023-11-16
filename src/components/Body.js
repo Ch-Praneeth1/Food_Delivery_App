@@ -47,25 +47,25 @@ const Body = () =>{
 
 
     return restaurantList.length ===0 ? <Shimmer/> :(                         //conditonal rendering using terinary operator 
-        <div className="body">
-            <div className="body-container">
+        <div>
+            <div className="flex space-x-8 align-middle">
             <div className="resturant-filter">
-                <button id="filter-btn" onClick={() =>{
-                    filteredList=restaurantList.filter((res) => res.info.avgRating>4.0);
+                <button className="m-4 border  h-9" id="filter-btn" onClick={() =>{
+                    filteredList=restaurantList.filter((res) => res.info.avgRating>3.5);
                     // {console.log(restaurantList)}
                     setfilterRestaurantList(filteredList)
                 }}>Top Rated Resturants</button>
             </div>
 
 
-            <div className="search">
-                <input type="text" id="search-input" placeholder="Search Resturant or Food.." value={searchValue} onChange={(e) =>{
+            <div >
+                <input type="text" className="m-4 h-9 mr-0" id="search-input" placeholder="Search Resturant or Food" value={searchValue} onChange={(e) =>{
                     setsearchValue(e.target.value)
                 }}></input>
             </div>
 
             <div className="search-button">
-                <button type="button" onClick={() =>{
+                <button type="button" className="m-4 h-9 w-[60px] bg-green-300 rounded-md ml-0" onClick={() =>{
                     // let input = document.getElementById("search-input").value;
                     // console.log(input);
                     var filteredList=[];
@@ -82,7 +82,7 @@ const Body = () =>{
             </div>
             </div>
 
-            <div className="resturant-container">
+            <div className="flex flex-wrap justify-center">
 
 
                 {/* Resturant cards

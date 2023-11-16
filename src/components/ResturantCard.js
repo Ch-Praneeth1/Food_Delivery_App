@@ -5,11 +5,11 @@ const ResturantCard = (props) =>{
     const {name,cuisines,avgRating,sla,cloudinaryImageId} =resData?.info;
     // console.log(resData)
     return (
-        <div className="resturant-card" style={{backgroundColor:"#f0f0f0"}}>
+        <div className="m-4 w-[250px] p-3 h-[350px] bg-gray-100 rounded-lg hover:bg-gray-200">
             <img 
-            className="resturant-logo" src={CDN_URL+cloudinaryImageId}></img>
-            <h3 style={{textDecoration: 'none'}}>{name}</h3>
-            <p>{cuisines.join(",")}</p>
+            className="rounded-lg h-[150px] w-[100%]" src={CDN_URL+cloudinaryImageId}></img>
+            <h3 className="font-bold" style={{textDecoration: 'none'}}>{name}</h3>
+            <p className="overflow-hidden">{cuisines.join(",")}</p>
             <h4>{avgRating}</h4>
             <h4>{sla.deliveryTime}</h4>
         </div>
