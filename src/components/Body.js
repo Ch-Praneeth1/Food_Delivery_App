@@ -1,9 +1,10 @@
-import ResturantCard from "./ResturantCard";
+import ResturantCard ,{WithFilteredResturantCard} from "./ResturantCard";
 import resList from "../utils/mockData";
 import { useState , useEffect } from "react";
 import Shimmer from "./Shimmer";
 import {Link} from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { WithFilteredResturantCard } from "./ResturantCard";
 
 
 const Body = () =>{
@@ -11,10 +12,12 @@ const Body = () =>{
     const [filterRestaurantList, setfilterRestaurantList] = useState([]);
     const [searchValue , setsearchValue] = useState([""]);
     const onlineStatus = useOnlineStatus();
+    const WithFilteredResturant=WithFilteredResturantCard(ResturantCard);
+
+    // console.log(restaurantList)
     
     useEffect(() =>{
         fetchData();
-
 
     },[]);
     
@@ -24,7 +27,8 @@ const Body = () =>{
         
         const json = await data.json();
         // console.log("data loding");
-        // console.log(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        // console.log("data loding");
+        // console.log(json);
         setrestaurantList(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setfilterRestaurantList(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
@@ -46,12 +50,14 @@ const Body = () =>{
     // };
 
 
+
+
     return restaurantList.length ===0 ? <Shimmer/> :(                         //conditonal rendering using terinary operator 
         <div>
             <div className="flex space-x-8 align-middle">
             <div className="resturant-filter">
                 <button className="m-4 border  h-9" id="filter-btn" onClick={() =>{
-                    filteredList=restaurantList.filter((res) => res.info.avgRating>3.5);
+                    filteredList=restaurantList.filter((res) => res.info.avgRating>4.0);
                     // {console.log(restaurantList)}
                     setfilterRestaurantList(filteredList)
                 }}>Top Rated Resturants</button>
@@ -95,10 +101,16 @@ const Body = () =>{
                     resData={resList[1]}
                 /> */}
 
+
+                
                 {
-                   filterRestaurantList.map(
-                        (resturant) => <Link style={{textDecoration: 'none', color:"black"}} key={resturant.info.id} to={"/Resturants/"+resturant.info.id}><ResturantCard resData={resturant}/></Link>
-                    )
+                   filterRestaurantList.map((resturant)  =>(
+                        <Link key={resturant.info.id} to={"/Resturants/"+resturant.info.id}>
+                            {resturant.info.promoted ? (<WithFilteredResturant resData={resturant} />
+                            ):(<ResturantCard resData={resturant} />)}
+                        </Link>
+
+                    ))
                 }
 
 
