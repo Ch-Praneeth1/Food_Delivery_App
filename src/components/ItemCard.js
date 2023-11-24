@@ -5,7 +5,7 @@ import { ITEM_URL } from "../utils/constants";
 const ItemCard = (props) =>{
     const {itemData} = props
     // const {card} = itemData;
-    console.log(itemData)
+    // console.log(itemData)
     
     const { name, price, imageId, nextAvailableAtMessage} =itemData?.card?.info;
     const {vegClassifier}=itemData?.card?.info?.itemAttribute;

@@ -3,13 +3,16 @@ import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import ItemCard from "./ItemCard";
 import useResturantMenu from "../utils/useResturantMenu";
+import ResturantCategory from "./ResturantCategory";
+
 
 const ResturantMenu = () =>{
 
     // const [resturantInfo, setresturantInfo] = useState(null);
     const {resId} = useParams();
-    const resturantInfo = useResturantMenu(resId);
-    console.log(resturantInfo)
+    const resturantInfo =  useResturantMenu(resId);
+    const [showIndex, setShowIndex] = useState(0);
+    // console.log(resturantInfo)
 
     // useEffect(()=>{
     //     fetchMenu();
@@ -26,71 +29,57 @@ const ResturantMenu = () =>{
     //     setresturantInfo(json.data);
     // }
 
-    if(resturantInfo === null){
-        return <Shimmer/>
-    };
 
-    const {name, cuisines, avgRatingString, areaName, costForTwoMessage, totalRatingsString} = resturantInfo?.cards[0]?.card?.card?.info;
-    const {deliveryTime} = resturantInfo?.cards[0]?.card?.card?.info?.sla;
-    // console.log(resturantInfo?.cards[0]?.card?.card?.info)
+    if(resturantInfo == null) return <Shimmer/>;
+
+    let {name, cuisines, avgRatingString, areaName, costForTwoMessage, totalRatingsString} = resturantInfo?.cards[0]?.card?.card?.info;
+    let {deliveryTime} = resturantInfo?.cards[0]?.card?.card?.info?.sla;
+
     // console.log(resturantInfo)
-    const {itemCards} = resturantInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
-    console.log(itemCards)
+    
+
+    // const {itemCards} = resturantInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+    
+    //   console.log(resturantInfo?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1].card?.card)
+
+    let catogories = resturantInfo?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=>c?.card?.card?.["@type"]=="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
+    // console.log(catogories)
 
 
     return(
+        
+
+        <div className=" m-auto">
 
 
-        <div className="menu-container">
+            
+            <div className="text-center">
+                <div className="rest-details">
+                    <h3 className="text-2xl font-bold my-6">{name}</h3>
+                </div>
 
-
-            <div className="menu">
-                <div className="menu-header">
-                    <div className="rest-details">
-                        <h3>{name}</h3>
-                        <p>{cuisines.join(",")}</p>
-                        <p>{areaName +", "+ deliveryTime+"min"}</p>
-                    </div>
-
-
-                    <div className="rating-container">
-                        <div className="rating">
-                            <div><i class="fa-solid fa-star"></i></div>
-                            <div><h5>{avgRatingString}</h5></div>
-                        </div>
-                        <div><p>{totalRatingsString}</p></div>
-                    </div>
-
+                <div>
+                    <p>{areaName +", "+ deliveryTime+"min"}</p>
+                    <div className="text-green-500"><p>{totalRatingsString}</p></div>
                 </div>
             </div>
 
-
-            <div className="cost-for-two">
-                <div><h4>{costForTwoMessage}</h4></div>
-            </div>
-
-
-            <div className="item-container">
-                <div className="item-list">
-    
-                    <h2>Menu</h2>
+            
+            {catogories.map((catogory, index) => (<ResturantCategory 
+                key={catogory?.card?.card?.title} 
+                data={catogory?.card?.card}
+                showItems={index==showIndex? true : false}
+                setShowIndex={() => setShowIndex(index)}
+                />))}
 
 
-                    {
-                        itemCards.map(
-                            (item) =>  <ItemCard key={item.card.info.id} itemData={item}/>
-                        )
-                    }
+            
 
-                        {/* {itemCards.map(item => <li key={item?.card?.info?.id}>{item?.card?.info?.name}</li>)}
-                        {itemCards.map(item => <li key={item?.card?.info?.id}>{item?.card?.info?.price/100}</li>)} */}
-
-
-                </div>
-            </div>
+           
 
         </div>
     )
+    
 }
 
 
