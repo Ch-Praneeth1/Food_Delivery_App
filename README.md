@@ -9,3 +9,13 @@ connect our store to app
 create a slice for cart
 dispatch (aciton)
 selector
+
+
+# setting up testing in our app
+install react testing library
+install jest
+install babel dependencies
+configure babel
+congigure parcel config file to disable defult babel transpilaion
+jest configuration     npx jest --inti
+install jsdom library
