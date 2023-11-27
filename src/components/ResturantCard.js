@@ -6,11 +6,11 @@ import UserContext from "../utils/UserContext";
 const ResturantCard = (props) =>{
     const {resData} = props
     
-    const {name,cuisines,avgRating,sla,cloudinaryImageId} =resData?.info;
+    const {name,cuisines,avgRating,sla,cloudinaryImageId} =resData;
     const {userLogedIn} = useContext(UserContext);
     console.log(resData)
     return (
-        <div className="m-4 w-[250px] p-3 h-[350px] bg-blue-100 rounded-lg hover:bg-blue-200">
+        <div data-testid="rescard" className="m-4 w-[250px] p-3 h-[350px] bg-blue-100 rounded-lg hover:bg-blue-200">
             <img 
             className="rounded-lg h-[150px] w-[100%]" src={CDN_URL+cloudinaryImageId}></img>
             <h3 className="font-bold" style={{textDecoration: 'none'}}>{name}</h3>

@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1701011096557" clover="3.2.0">
-  <project timestamp="1701011096557" name="All files">
-    <metrics statements="40" coveredstatements="30" conditionals="4" coveredconditionals="2" methods="15" coveredmethods="8" elements="59" coveredelements="40" complexity="0" loc="40" ncloc="40" packages="2" files="9" classes="9"/>
+<coverage generated="1701067488011" clover="3.2.0">
+  <project timestamp="1701067488011" name="All files">
+    <metrics statements="67" coveredstatements="58" conditionals="10" coveredconditionals="7" methods="24" coveredmethods="17" elements="101" coveredelements="82" complexity="0" loc="67" ncloc="67" packages="2" files="12" classes="12"/>
     <package name="components">
-      <metrics statements="21" coveredstatements="16" conditionals="4" coveredconditionals="2" methods="8" coveredmethods="6"/>
+      <metrics statements="47" coveredstatements="43" conditionals="10" coveredconditionals="7" methods="17" coveredmethods="15"/>
+      <file name="Body.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\components\Body.js">
+        <metrics statements="24" coveredstatements="22" conditionals="6" coveredconditionals="5" methods="8" coveredmethods="8"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="8" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="25" count="8" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="38" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="55" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="60" count="9" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="77" count="1" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="81" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="82" count="2" type="stmt"/>
+        <line num="86" count="1" type="stmt"/>
+        <line num="108" count="38" type="stmt"/>
+      </file>
       <file name="Contact.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\components\Contact.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
@@ -21,16 +48,21 @@
         <line num="42" count="1" type="cond" truecount="1" falsecount="1"/>
       </file>
       <file name="ResturantCard.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\components\ResturantCard.js">
-        <metrics statements="9" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="5" type="stmt"/>
-        <line num="9" count="4" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
+        <metrics statements="9" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="38" type="stmt"/>
+        <line num="9" count="38" type="stmt"/>
+        <line num="10" count="38" type="stmt"/>
+        <line num="11" count="38" type="stmt"/>
+        <line num="12" count="38" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
+      </file>
+      <file name="Shimmer.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\components\Shimmer.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
       </file>
       <file name="sum.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\components\sum.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -39,10 +71,10 @@
       </file>
     </package>
     <package name="utils">
-      <metrics statements="19" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="2"/>
+      <metrics statements="20" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="2"/>
       <file name="UserContext.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\utils\UserContext.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="2" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
       </file>
       <file name="appStore.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\utils\appStore.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -58,21 +90,25 @@
       </file>
       <file name="constants.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\utils\constants.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+      </file>
+      <file name="mockData.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\utils\mockData.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
       </file>
       <file name="useOnlineStatus.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\utils\useOnlineStatus.js">
         <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="6" count="4" type="stmt"/>
-        <line num="8" count="4" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="12" type="stmt"/>
+        <line num="8" count="12" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
-        <line num="14" count="3" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
-        <line num="20" count="4" type="stmt"/>
+        <line num="20" count="12" type="stmt"/>
       </file>
     </package>
   </project>

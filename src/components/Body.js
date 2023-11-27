@@ -1,10 +1,10 @@
-import ResturantCard ,{WithFilteredResturantCard} from "./ResturantCard";
+import ResturantCard  from "./ResturantCard";
 import resList from "../utils/mockData";
 import { useState , useEffect } from "react";
 import Shimmer from "./Shimmer";
 import {Link} from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import { WithFilteredResturantCard } from "./ResturantCard";
+// import { WithFilteredResturantCard } from "./ResturantCard";
 
 
 const Body = () =>{
@@ -12,7 +12,7 @@ const Body = () =>{
     const [filterRestaurantList, setfilterRestaurantList] = useState([]);
     const [searchValue , setsearchValue] = useState([""]);
     const onlineStatus = useOnlineStatus();
-    const WithFilteredResturant=WithFilteredResturantCard(ResturantCard);
+    // const WithFilteredResturant=WithFilteredResturantCard(ResturantCard);
 
     // console.log(restaurantList)
     
@@ -56,7 +56,7 @@ const Body = () =>{
         <div>
             <div className="flex space-x-8 align-middle">
             <div className="resturant-filter">
-                <button className="m-4 border  h-9" id="filter-btn" onClick={() =>{
+                <button  data-testid="topRatedResturants" className="m-4 border  h-9" id="filter-btn" onClick={() =>{
                     filteredList=restaurantList.filter((res) => res.info.avgRating>4.0);
                     // {console.log(restaurantList)}
                     setfilterRestaurantList(filteredList)
@@ -65,7 +65,7 @@ const Body = () =>{
 
 
             <div >
-                <input type="text" className="m-4 h-9 mr-0" id="search-input" placeholder="Search Resturant or Food" value={searchValue} onChange={(e) =>{
+                <input data-testid="searchbox" type="text" className="m-4 h-9 mr-0" id="search-input" placeholder="Search Resturant or Food" value={searchValue} onChange={(e) =>{
                     setsearchValue(e.target.value)
                 }}></input>
             </div>
@@ -106,8 +106,7 @@ const Body = () =>{
                 {
                    filterRestaurantList.map((resturant)  =>(
                         <Link key={resturant.info.id} to={"/Resturants/"+resturant.info.id}>
-                            {resturant.info.promoted ? (<WithFilteredResturant resData={resturant} />
-                            ):(<ResturantCard resData={resturant} />)}
+                            <ResturantCard resData={resturant?.info} />
                         </Link>
 
                     ))
