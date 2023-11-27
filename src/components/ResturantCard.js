@@ -8,7 +8,7 @@ const ResturantCard = (props) =>{
     
     const {name,cuisines,avgRating,sla,cloudinaryImageId} =resData;
     const {userLogedIn} = useContext(UserContext);
-    console.log(resData)
+    // console.log(resData)
     return (
         <div data-testid="rescard" className="m-4 w-[250px] p-3 h-[350px] bg-blue-100 rounded-lg hover:bg-blue-200">
             <img 
