@@ -21,14 +21,14 @@ const ResturantOffers = () =>{
 
     return(
 
-        <div className=" overflow-hidden w-12/12 ">
-            <h1 className="px-[95px] p-4 absolute font-bold text-3xl">Best offers for you</h1>
+        <div>
+            <h1 className=" px-[95px] p-4 absolute font-bold text-3xl ">Best offers for you</h1>
 
-            <div className="flex  m-4 p-8 w-12/12">
+            <div className="flex flex-shrink-0 m-4 p-16 pb-3 border-b-2">
 
                 {
-                    resturantOffers.map((offCard) => (
-                        <OfferCard offerData={offCard}/>
+                    resturantOffers.map((offCard) => ( 
+                        <OfferCard key={offCard.id} offerData={offCard}/>
                     ))
                 }
 

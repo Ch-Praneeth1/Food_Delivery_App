@@ -5,11 +5,12 @@ import Shimmer from "./Shimmer";
 import {Link} from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import ResturantOffers from "./ResturantOffers";
+import Dishes from "./Dishes";
 // import { WithFilteredResturantCard } from "./ResturantCard";
 
 
 const Body = () =>{
-    const [restaurantList, setrestaurantList] = useState([]);
+    const [restaurantList, setrestaurantList] = useState([""]);
     const [filterRestaurantList, setfilterRestaurantList] = useState([]);
     const [searchValue , setsearchValue] = useState([""]);
     const onlineStatus = useOnlineStatus();
@@ -28,9 +29,9 @@ const Body = () =>{
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=16.3066525&lng=80.4365402&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         
         const json = await data.json();
-        // console.log("data loding");
-        // console.log("data loding");
         // console.log(json);
+        // console.log("data loding");
+        console.log(json);
         setrestaurantList(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         
         setfilterRestaurantList(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
@@ -56,10 +57,20 @@ const Body = () =>{
 
 
 
-    return restaurantList.length ===0 ? <Shimmer/> :(                         //conditonal rendering using terinary operator 
+    return restaurantList.length ==0 ? <Shimmer/> :(                         //conditonal rendering using terinary operator 
         <div>
             
-            <div><ResturantOffers/></div>
+            <div className="flex flex-shrink-0 overflow-x-scroll hide-scrollbar">
+                <ResturantOffers/>
+            </div>
+
+            <div className="flex flex-shrink-0 overflow-x-scroll hide-scrollbar ">
+                <Dishes/>
+            </div>
+
+            <div>
+                
+            </div>
 
             <div className="flex space-x-8 align-middle">
 
@@ -70,7 +81,7 @@ const Body = () =>{
                 </div>
 
                 <div className="search-button">
-                    <button type="button" className="m-6 -ml-10 mx-16 h-9 w-[60px] bg-green-300 rounded-md" onClick={() =>{
+                    <button type="button"  className="m-6 -ml-10 mx-16 h-9 w-[60px] bg-green-300 rounded-md" onClick={() =>{
                         // let input = document.getElementById("search-input").value;
                         // console.log(input);
                         var filteredList=[];
