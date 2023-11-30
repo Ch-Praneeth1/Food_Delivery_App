@@ -10,3 +10,5 @@ export const ITEM_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_
 export const OFFER_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/";
 
 export const DISHES_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/";
+
+export const TOP_RES_IMG_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";

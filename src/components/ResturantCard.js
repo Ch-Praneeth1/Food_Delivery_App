@@ -10,7 +10,7 @@ const ResturantCard = (props) =>{
     const {userLogedIn} = useContext(UserContext);
     // console.log(resData)
     return (
-        <div data-testid="rescard" className="m-4 w-[250px] p-3 h-[350px] bg-blue-100 rounded-lg hover:bg-blue-200">
+        <div data-testid="rescard" className="m-4 w-[250px] p-3 h-[350px] bg-white hover:shadow-xl">
             <img 
             className="rounded-lg h-[150px] w-[100%]" src={CDN_URL+cloudinaryImageId}></img>
             <h3 className="font-bold" style={{textDecoration: 'none'}}>{name}</h3>

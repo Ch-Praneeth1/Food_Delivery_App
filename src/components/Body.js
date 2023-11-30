@@ -4,8 +4,9 @@ import { useState , useEffect } from "react";
 import Shimmer from "./Shimmer";
 import {Link} from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import ResturantOffers from "./ResturantOffers";
-import Dishes from "./Dishes";
+import OfferCard from "./OfferCard";
+import DishCard from "./DishCard";
+import TopResturantCard from "./TopResturantCard";
 // import { WithFilteredResturantCard } from "./ResturantCard";
 
 
@@ -14,6 +15,10 @@ const Body = () =>{
     const [filterRestaurantList, setfilterRestaurantList] = useState([]);
     const [searchValue , setsearchValue] = useState([""]);
     const onlineStatus = useOnlineStatus();
+    const [resturantOffers, setResturantOffers] = useState([]);
+    const [dishCards, setDishCards] = useState([]);
+    const [topResturantList, setTopResturantsList] = useState([""]);
+    // console.log(topResturantList);
 
     // const WithFilteredResturant=WithFilteredResturantCard(ResturantCard);
 
@@ -31,11 +36,16 @@ const Body = () =>{
         const json = await data.json();
         // console.log(json);
         // console.log("data loding");
-        console.log(json);
+        // console.log(json);
         setrestaurantList(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         
         setfilterRestaurantList(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        
+
+        setResturantOffers(json?.data?.cards[0]?.card?.card?.imageGridCards?.info);
+
+        setDishCards(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.info);
+
+        setTopResturantsList(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
 
 
@@ -59,18 +69,41 @@ const Body = () =>{
 
     return restaurantList.length ==0 ? <Shimmer/> :(                         //conditonal rendering using terinary operator 
         <div>
-            
-            <div className="flex flex-shrink-0 overflow-x-scroll hide-scrollbar">
-                <ResturantOffers/>
+
+
+            <div className="flex flex-shrink-0 overflow-x-scroll hide-scrollbar"> 
+                <h1 className=" px-[95px] p-4 absolute font-bold text-3xl ">Best offers for you</h1>
+                <div className="flex flex-shrink-0 m-4 p-16 pb-3">
+                    {
+                        resturantOffers.map((offCard) => ( 
+                            <OfferCard key={offCard.id} offerData={offCard}/>
+                        ))
+                    }
+                </div>
             </div>
+
 
             <div className="flex flex-shrink-0 overflow-x-scroll hide-scrollbar ">
-                <Dishes/>
+                <h1 className=" px-[95px] p-4 absolute font-bold text-3xl ">What's on your mind?</h1>
+                <div className="flex flex-shrink-0 m-4 p-16 pb-3 border-b-2">
+                    {dishCards.map((dishCard)=>(
+                        <DishCard key={dishCard?.card?.id} card={dishCard}/>
+                    ))}
+                </div>
             </div>
 
-            <div>
-                
+
+
+            <div className="flex flex-shrink-0 overflow-x-scroll hide-scrollbar">
+                <h1 className=" px-[95px] p-4 absolute font-bold text-3xl ">Top Resturant Chain's</h1>
+                <div className="flex flex-shrink-0 m-4 p-14 pb-1 border-b-2">
+                    {topResturantList.map((topResturant)=>(
+                        <TopResturantCard key={topResturant?.info?.id} data={topResturant}/>
+                    ))}
+                </div>
             </div>
+
+
 
             <div className="flex space-x-8 align-middle">
 
