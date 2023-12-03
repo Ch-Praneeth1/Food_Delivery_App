@@ -1,35 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1701073131701" clover="3.2.0">
-  <project timestamp="1701073131701" name="All files">
-    <metrics statements="110" coveredstatements="96" conditionals="20" coveredconditionals="15" methods="41" coveredmethods="33" elements="171" coveredelements="144" complexity="0" loc="110" ncloc="110" packages="2" files="18" classes="18"/>
+<coverage generated="1701361919417" clover="3.2.0">
+  <project timestamp="1701361919418" name="All files">
+    <metrics statements="138" coveredstatements="124" conditionals="20" coveredconditionals="14" methods="47" coveredmethods="39" elements="205" coveredelements="177" complexity="0" loc="138" ncloc="138" packages="2" files="21" classes="21"/>
     <package name="components">
-      <metrics statements="81" coveredstatements="70" conditionals="20" coveredconditionals="15" methods="31" coveredmethods="26"/>
+      <metrics statements="106" coveredstatements="95" conditionals="20" coveredconditionals="14" methods="37" coveredmethods="32"/>
       <file name="Body.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\components\Body.js">
-        <metrics statements="24" coveredstatements="21" conditionals="6" coveredconditionals="5" methods="8" coveredmethods="6"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="6" type="stmt"/>
-        <line num="12" count="6" type="stmt"/>
-        <line num="13" count="6" type="stmt"/>
-        <line num="14" count="6" type="stmt"/>
+        <metrics statements="33" coveredstatements="30" conditionals="6" coveredconditionals="4" methods="11" coveredmethods="9"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
         <line num="19" count="6" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="25" count="6" type="stmt"/>
-        <line num="26" count="2" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
         <line num="28" count="2" type="stmt"/>
-        <line num="32" count="2" type="stmt"/>
-        <line num="33" count="2" type="stmt"/>
-        <line num="38" count="6" type="cond" truecount="1" falsecount="1"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="55" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="60" count="0" type="stmt"/>
-        <line num="62" count="0" type="stmt"/>
-        <line num="69" count="1" type="stmt"/>
-        <line num="77" count="1" type="stmt"/>
-        <line num="79" count="1" type="stmt"/>
-        <line num="81" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="82" count="2" type="stmt"/>
-        <line num="86" count="1" type="stmt"/>
-        <line num="108" count="29" type="stmt"/>
+        <line num="33" count="6" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="53" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="70" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="79" count="16" type="stmt"/>
+        <line num="90" count="80" type="stmt"/>
+        <line num="101" count="82" type="stmt"/>
+        <line num="112" count="1" type="stmt"/>
+        <line num="120" count="1" type="stmt"/>
+        <line num="122" count="1" type="stmt"/>
+        <line num="124" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="125" count="2" type="stmt"/>
+        <line num="129" count="1" type="stmt"/>
+        <line num="135" count="0" type="stmt"/>
+        <line num="137" count="0" type="stmt"/>
+        <line num="160" count="29" type="stmt"/>
       </file>
       <file name="Cart.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\components\Cart.js">
         <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
@@ -44,6 +53,12 @@
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
+      </file>
+      <file name="DishCard.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\components\DishCard.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="80" type="stmt"/>
+        <line num="11" count="80" type="stmt"/>
       </file>
       <file name="Header.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\components\Header.js">
         <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
@@ -74,6 +89,13 @@
         <line num="13" count="5" type="stmt"/>
         <line num="15" count="18" type="stmt"/>
         <line num="25" count="2" type="stmt"/>
+      </file>
+      <file name="OfferCard.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\components\OfferCard.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="16" type="stmt"/>
+        <line num="10" count="16" type="stmt"/>
+        <line num="13" count="16" type="stmt"/>
       </file>
       <file name="ResturantCard.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\components\ResturantCard.js">
         <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
@@ -111,7 +133,19 @@
       <file name="Shimmer.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\components\Shimmer.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="2" type="stmt"/>
-        <line num="3" count="3" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+      <file name="TopResturantCard.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\components\TopResturantCard.js">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="84" type="stmt"/>
+        <line num="6" count="84" type="stmt"/>
+        <line num="7" count="84" type="stmt"/>
+        <line num="8" count="84" type="stmt"/>
+        <line num="10" count="84" type="stmt"/>
+        <line num="11" count="84" type="stmt"/>
+        <line num="12" count="84" type="stmt"/>
+        <line num="15" count="84" type="stmt"/>
       </file>
       <file name="sum.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\components\sum.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -120,7 +154,7 @@
       </file>
     </package>
     <package name="utils">
-      <metrics statements="29" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="7"/>
+      <metrics statements="32" coveredstatements="29" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="7"/>
       <file name="UserContext.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\utils\UserContext.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="4" type="stmt"/>
@@ -138,11 +172,14 @@
         <line num="21" count="2" type="stmt"/>
       </file>
       <file name="constants.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\utils\constants.js">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="4" type="stmt"/>
         <line num="4" count="4" type="stmt"/>
         <line num="6" count="4" type="stmt"/>
         <line num="8" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
       </file>
       <file name="mockData.js" path="C:\Users\chpra\OneDrive\Desktop\FoodDelivery\src\utils\mockData.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>

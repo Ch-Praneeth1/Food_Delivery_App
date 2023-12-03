@@ -98,7 +98,7 @@ const Body = () =>{
                 <h1 className=" px-[95px] p-4 absolute font-bold text-3xl ">Top Resturant Chain's</h1>
                 <div className="flex flex-shrink-0 m-4 p-14 pb-1 border-b-2">
                     {topResturantList.map((topResturant)=>(
-                        <TopResturantCard key={topResturant?.info?.id} data={topResturant}/>
+                            <TopResturantCard key={topResturant?.data?.info?.id} data={topResturant}/>
                     ))}
                 </div>
             </div>

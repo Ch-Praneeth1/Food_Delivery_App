@@ -1,7 +1,7 @@
 import { TOP_RES_IMG_URL } from "../utils/constants";
 
 const TopResturantCard = (props) => {
-
+    
     const name = props?.data?.info?.name;
     const deliveryTime = props?.data?.info?.sla?.deliveryTime;
     const imgId = props?.data?.info?.cloudinaryImageId;
@@ -10,7 +10,7 @@ const TopResturantCard = (props) => {
     const areaName = props?.data?.info?.areaName;
     const header = props?.data?.info?.aggregatedDiscountInfoV3?.header;
     const subHeader = props?.data?.info?.aggregatedDiscountInfoV3?.subHeader;
-    // console.log(subHeader)
+    console.log(props)
 
     return(
         <div className="m-8 w-[274px] cursor-pointer  hover:shadow-xl">

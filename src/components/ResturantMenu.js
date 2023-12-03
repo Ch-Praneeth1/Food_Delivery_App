@@ -71,12 +71,6 @@ const ResturantMenu = () =>{
                 showItems={index==showIndex? true : false}
                 setShowIndex={() => setShowIndex(index)}
                 />))}
-
-
-            
-
-           
-
         </div>
     )
     
