@@ -12,7 +12,7 @@ const ResturantMenu = () =>{
     const {resId} = useParams();
     const resturantInfo =  useResturantMenu(resId);
     const [showIndex, setShowIndex] = useState();
-    // console.log(resturantInfo)
+    console.log(resturantInfo)
 
     // useEffect(()=>{
     //     fetchMenu();
@@ -42,7 +42,7 @@ const ResturantMenu = () =>{
     
     //   console.log(resturantInfo?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1].card?.card)
 
-    let catogories = resturantInfo?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=>c?.card?.card?.["@type"]=="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
+    let catogories = resturantInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=>c?.card?.card?.["@type"]=="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
     console.log(catogories)
 
 
